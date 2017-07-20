@@ -52,7 +52,6 @@ class Relay {
         
             // Accept a new value for the characterstic's value
             onWriteRequest : function(data, offset, withoutResponse, callback) {
-                relay.onMessage(data);
                 this.value = data;
                 if (null !== value) {
                     relay.messageManager.processDatagram(data);
